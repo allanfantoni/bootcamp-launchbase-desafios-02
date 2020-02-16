@@ -43,8 +43,10 @@ const closeModal = document.querySelector('.close-modal').addEventListener('clic
   modalOverlay.querySelector('iframe').src = ``;
 });
 
-const maximizeModal = document.querySelector('.modal').addEventListener('click', function() {
+const maximizeModal = document.querySelector('.maximize-modal').addEventListener('click', function() {
   if (modal.classList.contains('maximize')) {
-    // modal
-  }  
+    modal.classList.remove('maximize');
+  } else {
+    modal.classList.add('maximize');
+  } 
 });

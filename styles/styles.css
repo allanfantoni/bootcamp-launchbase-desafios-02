@@ -155,6 +155,13 @@ header {
   visibility: visible;
 }
 
+/* MODAL MAXIMIZE */
+.modal.maximize {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
 iframe {
   width: 100%;
   height: 90%;
