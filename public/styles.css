@@ -3,7 +3,8 @@
 :root {
   --color-green: #50fa7b;
   --color-orange: #fd951f;
-  --color-rocket: #7159c1
+  --color-rocket: #7159c1;
+  --color-red: #FF0000;
 }
 
 body {
@@ -167,4 +168,16 @@ iframe {
   height: 90%;
   position: absolute;
   top: 5%;
+}
+
+#error-message {
+  text-align: center;
+  padding: 32px;
+}
+
+#error-message h1 {
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: bold;
+  color: var(--color-red);
 }
