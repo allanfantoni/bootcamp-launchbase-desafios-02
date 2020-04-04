@@ -6,61 +6,43 @@
 {% endblock %}
 
 {% block content %}
-<div id="wrapper">
-  <h1>Conteúdos</h1>
-</div>
+  <div id="wrapper">
+    <h1>Conteúdos</h1>
+  </div>
 
-<section class="cards">
-  <div id="starter" class="card">
-    <div class="card__image-container">
-      <img src="/starter.svg" alt="starter"/>
-    </div>
-    <div class="card__title">
-      <p>11 módulos</p>
-      <p>FREE</p>
+  <section class="cards">
+    {% for item in items %}
+      <div id="{{ item.id }}" class="card">
+        <div class="card__image-container">
+          <img src="/{{ item.id }}.svg" alt="{{ item.id }}"/>
+        </div>
+        <div class="card__title">
+          <p>{{ item.modules }}</p>
+          <p>{{ item.price }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <a class="maximize-modal">
+        <i class="material-icons">
+          maximize
+        </i>
+      </a>
+
+      <a class="close-modal">
+        <i class="material-icons">
+          close
+        </i>
+      </a>
+
+      <div class="modal-content">
+        <iframe src="" frameborder="0"></iframe>
+      </div>
     </div>
   </div>
 
-  <div id="launchbase" class="card">
-    <div class="card__image-container">
-      <img src="/launchbase.svg" alt="launchbase"/>
-    </div>
-    <div class="card__title">
-      <p>34 módulos</p>
-      <p>Pago</p>
-    </div>
-  </div>
-
-  <div id="gostack" class="card">
-    <div class="card__image-container">
-      <img src="/gostack.svg" alt="gostack"/>
-    </div>
-    <div class="card__title">
-      <p>34 módulos</p>
-      <p>Pago</p>
-    </div>
-  </div>
-</section>
-
-<div class="modal-overlay">
-  <div class="modal">
-    <a class="maximize-modal">
-      <i class="material-icons">
-        maximize
-      </i>
-    </a>
-
-    <a class="close-modal">
-      <i class="material-icons">
-        close
-      </i>
-    </a>
-
-    <div class="modal-content">
-      <iframe src="" frameborder="0"></iframe>
-    </div>
-  </div>
-</div>
-
-<script src="/script.js"></script>
+  <script src="/script.js"></script>
 {% endblock %}

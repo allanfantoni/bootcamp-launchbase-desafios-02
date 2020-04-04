@@ -99,3 +99,7 @@ server.use(function(req, res) {
   res.status(404).render("not-found");
 });
 ```
+
+---
+
+Nesse desafio você deve atualizar os arquivos com informações de cursos e descrição de forma dinâmica.
