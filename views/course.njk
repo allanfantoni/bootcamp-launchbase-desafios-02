@@ -1,17 +1,16 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-  <title>Courses</title>
+  <title>{{ item.title }} course</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
   <div id="wrapper">
-    <h1>Conteúdos</h1>
+    <h1>Curso {{ item.title }}</h1>
   </div>
 
-  <section class="cards">
-    {% for item in items %}
+  <section class="single-card-section">
       <div id="{{ item.id }}" class="card">
         <div class="card__image-container">
           <img src="/{{ item.id }}.svg" alt="{{ item.id }}"/>
@@ -19,11 +18,11 @@
         <div class="card__title">
           <p>{{ item.description }}</p>
           <p>{{ item.modules }}</p>
-          <p>{{ item.price }}</p>
+          <div id="links-footer" class="links">
+            <p><a href="{{ item.url }}" target="_blank">{{ item.price }}</a></p>
+          </div>
         </div>
       </div>
-    {% endfor %}
   </section>
-  
-  <script src="/script.js"></script>
+
 {% endblock %}

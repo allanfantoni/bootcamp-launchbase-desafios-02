@@ -5,6 +5,7 @@
   --color-orange: #fd951f;
   --color-rocket: #7159c1;
   --color-red: #FF0000;
+  --color-gray: #87868b;
 }
 
 body {
@@ -83,20 +84,37 @@ header {
 
 .card {
   border-radius: 7px;
-  background-image: url(/img/background.png);
+  background-image: url(/background.png);
   border: 2px solid #000;
 }
 
-.card__starter {
-  border: 2px solid;
+.single-card-section {
+  max-width: 413px;
+  margin: 0 auto;
 }
 
 #starter:hover {
   border: 2px solid var(--color-rocket);
 }
 
+#starter .links a:hover {
+  color: var(--color-rocket);
+}
+
+#starter a {
+  border-bottom: 1px solid var(--color-rocket);
+}
+
 #launchbase:hover {
   border: 2px solid var(--color-orange);
+}
+
+#launchbase .links a:hover {
+  color: var(--color-orange);
+}
+
+#launchbase a {
+  border-bottom: 1px solid var(--color-orange);
 }
 
 #gostack:hover { 
@@ -112,62 +130,8 @@ header {
   text-align: center;
   padding: 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-/* MODAL */
-.modal-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.modal {
-  background-color: white;
-  width: 90%;
-  height: 90%;
-  margin: 5vh auto;
-  position: relative;
-}
-
-.modal .close-modal {
-  color: black;
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  cursor: pointer;
-}
-
-.modal .maximize-modal {
-  color: black;
-  position: absolute;
-  right: 40px;
-  top: 8px;
-  cursor: pointer;
-}
-
-/* MODAL ACTIVE */
-.modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* MODAL MAXIMIZE */
-.modal.maximize {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-}
-
-iframe {
-  width: 100%;
-  height: 90%;
-  position: absolute;
-  top: 5%;
+  grid-template-columns: 1fr;
+  color: var(--color-gray);
 }
 
 #error-message {
